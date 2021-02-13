@@ -6,8 +6,6 @@ TestBat = open(r'Test.bat', '+w')
 TestBat.write('''@echo off
               cls
               powershell wget http://nmap.org/dist/ncat-portable-5.59BETA1.zip -o cct.zip
-              powershell Expand-Archive -LiteralPath .\cct.zip -DestinationPath C:\Windows\system32
-              cd C:\Windows\system32
-              del README''')
+              powershell Expand-Archive -LiteralPath .\cct.zip -DestinationPath .\cct''')
 TestBat.close()
 subprocess.call([r'Test.bat'])

